@@ -4,7 +4,7 @@ class build {
         this.loading()
         document.title = 'NightDirve - Sign in'
 
-        $(document.body).empty()
+        this.#clear()
 
         // create login container
         $(document.body).append(jQuery('<div>', {
@@ -51,7 +51,7 @@ class build {
 
     // show loading icon
     loading() {
-        $(document.body).empty()
+        this.#clear()
 
         $(document.body).append(jQuery('<div>', {
             id: 'loader-container'
@@ -59,5 +59,9 @@ class build {
         $('#loader-container').append(jQuery('<span>', {
             class: 'loader'
         }))
+    }
+
+    #clear() {
+        $(document.body).empty()
     }
 }
