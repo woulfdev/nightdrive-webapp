@@ -1,15 +1,23 @@
 :root {
     --color-primary: #222222;
     --color-primary-highlight: #300070;
+    --color-primary-dark: #404040;
     --color-secondary: #7225D5;
     --color-highlight: #ff0000;
     --color-text: #ffffff;
 }
 
 html {
+    height: 100%;
     background-color: var(--color-primary);
+    font-size: 100%;
     color: var(--color-text);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+    margin-top: 2vw;
 }
 
 .border {
@@ -19,13 +27,52 @@ html {
     border-color: var(--color-secondary);
 }
 
+.border.smal {
+    border-width: 1px;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px 10px var(--color-primary-dark);
+}
+
+/* div centering */
+.centered.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered.box {
+    background-color: var(--color-primary);
+}
+
+/* input element styling */
 .input.default {
+    margin: 0.7vw;
     border-width: 2px;
-    border-radius: 4px;
+    border-radius: 5px;
     border-style: solid;
     border-color: var(--color-secondary);
     background-color: var(--color-primary);
     color: var(--color-white);
+    font-size: larger;
+}
+
+.input.default:disabled {
+    opacity: 0.6;
+}
+
+.input.default:disabled:hover {
+    background-color: inherit;
+}
+
+.input.default.stacked {
+    display: block;
+}
+
+.input.default.center {
+    margin: 0.7vw auto 0.7vw auto;
+    display: block;
 }
 
 .input.default:hover {
@@ -36,6 +83,20 @@ html {
     background-color: var(--color-primary-highlight);
 }
 
+.input.default.button {
+    cursor: pointer;
+}
+
+.input.big.button {
+    /* cursor: pointer; */
+    font-size: x-large;
+}
+
+.text.centered {
+    text-align: center;
+}
+
+/* link styling */
 .link.default.external::after {
     content: "";
     width: 12px;
@@ -43,4 +104,8 @@ html {
     margin-left: 4px;
     background: url("../icons/external-link-ico.min.svg") no-repeat center center;
     display: inline-block;
+}
+
+#login-box {
+    margin-top: 4vw;
 }
