@@ -4,3 +4,12 @@
     --color-highlight: #ff0000;
     --color-text: #ffffff;
 }
+
+.link.default.external::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    background: url("../icons/external-link-ico.min.svg") no-repeat center center;
+    display: inline-block;
+}
