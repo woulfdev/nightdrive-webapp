@@ -13,7 +13,7 @@ class session {
     }
 
     validateSession(token) {
-        if(typeof key === 'string' || key instanceof String) {
+        if(typeof token === 'string' || token instanceof String) {
 
         }
 

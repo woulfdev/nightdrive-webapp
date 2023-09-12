@@ -1,10 +1,10 @@
 class build {
     // build the sign in page
-    signin() {
-        // clear page
-        $(document.body).empty()
-
+    signin() {        
+        this.#loading()
         document.title = 'NightDirve - Sign in'
+
+        $(document.body).empty()
 
         // create login container
         $(document.body).append(jQuery('<div>', {
@@ -42,6 +42,18 @@ class build {
             type: 'button',
             value: 'Sign in',
             class: 'input default big button stacked center'
+        }))
+    }
+
+    // show loading icon
+    #loading() {
+        $(document.body).empty()
+
+        $(document.body).append(jQuery('<div>', {
+            id: 'loader-container'
+        }))
+        $('#loader-container').append(jQuery('<span>', {
+            class: 'loader'
         }))
     }
 }

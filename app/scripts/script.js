@@ -7,7 +7,7 @@ $().ready(function(){
     if(checkForExistingSession()) {
         // check if said session is still valid else show sign in
         if(userSession.validateSession(storage.get('token'))) {
-
+            
         }
         else {
             builder.signin()
@@ -21,8 +21,8 @@ $().ready(function(){
 // click listener's
 $(document).on('click', '#btn-signin', function(){
     if($('#inp-username').val() && $('#inp-password').val()) {
-        userSession.start($('#inp-username').val(), $('#inp-password').val())
         $('#btn-signin').prop('disabled', true)
+        userSession.start($('#inp-username').val(), $('#inp-password').val())
     }
 })
 
