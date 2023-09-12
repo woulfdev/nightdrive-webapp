@@ -31,6 +31,13 @@ class build {
             placeholder: 'password',
             class: 'input default text stacked'
         })).append(jQuery('<input>', {
+            id: 'inp-stay-signed-in',
+            type: 'checkbox',
+            calss: 'input default checkbox'
+        })).append(jQuery('<label>', {
+            for: 'inp-stay-signed-in',
+            text: 'stay signed in',
+        })).append(jQuery('<input>', {
             id: 'btn-signin',
             type: 'button',
             value: 'Sign in',

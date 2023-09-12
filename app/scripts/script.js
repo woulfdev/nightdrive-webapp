@@ -20,8 +20,10 @@ $().ready(function(){
 
 // click listener's
 $(document).on('click', '#btn-signin', function(){
-    userSession.start($('#inp-username').val(), $('#inp-password').val())
-    $('#btn-signin').prop('disabled', true)
+    if($('#inp-username').val() && $('#inp-password').val()) {
+        userSession.start($('#inp-username').val(), $('#inp-password').val())
+        $('#btn-signin').prop('disabled', true)
+    }
 })
 
 // check if valid session credentials are stored
