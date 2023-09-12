@@ -4,6 +4,8 @@ class build {
         // clear page
         $(document.body).empty()
 
+        document.title = 'NightDirve - Sign in'
+
         // create login container
         $(document.body).append(jQuery('<div>', {
             id: 'login-container',

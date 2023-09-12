@@ -3,9 +3,14 @@ const builder = new build()
 const userSession = new session()
 
 $().ready(function(){
+    // check if a session already exists else show sign in
     if(checkForExistingSession()) {
+        // check if said session is still valid else show sign in
         if(userSession.validateSession(storage.get('token'))) {
 
+        }
+        else {
+            builder.signin()
         }
     }
     else {
