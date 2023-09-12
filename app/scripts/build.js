@@ -1,7 +1,7 @@
 class build {
     // build the sign in page
     signin() {        
-        this.#loading()
+        this.loading()
         document.title = 'NightDirve - Sign in'
 
         $(document.body).empty()
@@ -45,8 +45,12 @@ class build {
         }))
     }
 
+    profile() {
+
+    }
+
     // show loading icon
-    #loading() {
+    loading() {
         $(document.body).empty()
 
         $(document.body).append(jQuery('<div>', {
