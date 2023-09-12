@@ -3,8 +3,12 @@ const builder = new build()
 const userSession = new session()
 
 $().ready(function(){
-    console.log(checkExistingSession())
-    builder.signin();
+    if(checkExistingSession()) {
+
+    }
+    else {
+        builder.signin();
+    }
 })
 
 // check if valid session credentials are stored
