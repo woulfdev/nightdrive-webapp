@@ -12,6 +12,13 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.border {
+    border-width: 2px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--color-secondary);
+}
+
 .input.default {
     border-width: 2px;
     border-radius: 4px;
@@ -22,6 +29,10 @@ html {
 }
 
 .input.default:hover {
+    background-color: var(--color-primary-highlight);
+}
+
+.input.default:focus {
     background-color: var(--color-primary-highlight);
 }
 

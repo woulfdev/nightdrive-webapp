@@ -5,7 +5,7 @@ class build {
         // create login container
         $(document.body).append(jQuery('<div>', {
             id: 'login-container',
-            class: 'centered'
+            class: 'centered border'
         })).append(jQuery('<h2>', {
             text: 'Sign in'
         })).append(jQuery('<input>', {
@@ -21,6 +21,5 @@ class build {
             value: 'Sign in',
             class: 'input default button'
         }))
-
     }
 }
