@@ -1,5 +1,6 @@
 :root {
     --color-primary: #222222;
+    --color-primary-highlight: #300070;
     --color-secondary: #7225D5;
     --color-highlight: #ff0000;
     --color-text: #ffffff;
@@ -20,8 +21,8 @@ html {
     color: var(--color-white);
 }
 
-.input.default.button:hover {
-    background-color: var();
+.input.default:hover {
+    background-color: var(--color-primary-highlight);
 }
 
 .link.default.external::after {
