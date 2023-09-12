@@ -10,9 +10,11 @@ class build {
             text: 'Sign in'
         })).append(jQuery('<input>', {
             type: 'text',
+            placeholder: 'username',
             class: 'input default text'
         })).append(jQuery('<input>', {
             type: 'password',
+            placeholder: 'password',
             class: 'input default text'
         })).append(jQuery('<input>', {
             type: 'button',
