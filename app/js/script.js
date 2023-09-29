@@ -1,6 +1,8 @@
-const storage = new browserStorage()
-const builder = new build()
-const userSession = new session()
+const storage = new BrowserStorage()
+const builder = new Build()
+const userSession = new Session()
+
+const SERVER_ADDRESS = 'nightdrive.example.com'
 
 $().ready(function(){
     builder.loading()
@@ -20,10 +22,27 @@ $().ready(function(){
 })
 
 // click listener's
-$(document).on('click', '#btn-signin', function(){
-    if($('#inp-username').val() && $('#inp-password').val()) {
+$(document).on('click', '#btn-signin', function() {
+    username = $('#inp-username').val()
+    password = $('#inp-password').val()
+    
+    if(username && password) {
         $('#btn-signin').prop('disabled', true)
-        userSession.start($('#inp-username').val(), $('#inp-password').val())
+        $('#hint-inp-signin').text('').css('color', '#ffffff')
+        builder.loading()
+        userSession.start(username, password, $('#inp-stay-signed-in').prop('checked'), function() {})
+        username = password = undefined
+    }
+    else {
+        $('#hint-inp-signin').text('Please enter Username and Password!').css('color', '#ff0000')
+    }
+})
+
+// change server address on sign in screen
+$(document).on('click', '#btn-change-server', function() {
+    var input = prompt('Please enter the server address:')
+    if(input !== null) {
+        alert(input)
     }
 })
 

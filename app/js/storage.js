@@ -1,4 +1,4 @@
-class browserStorage {
+class BrowserStorage {
     #mode
 
     constructor() {

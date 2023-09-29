@@ -1,11 +1,11 @@
-class session {
+class Session {
     constructor() {
         
     }
 
-    start(username, password) {
+    start(username, password, keepAlive, callback) {
         if(typeof username === 'string' || username instanceof String && typeof password === 'string' || password instanceof String) {
-            
+            callback()
         }
 
         username = password = undefined
@@ -21,7 +21,4 @@ class session {
     }
 
     // private functions
-    #test() {
-        console.log('test')
-    }
 }
