@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<strings>
+    <string>
+        <key>txt_app_name</key>
+        <value>NightDrive</value>
+    </string>
+    <string>
+        <key>txt_label_staysignedin</key>
+        <value>stay signed in</value>
+    </string>
+    <string>
+        <key>txt_placeholder_password</key>
+        <value>password</value>
+    </string>
+    <string>
+        <key>txt_paceholder_username</key>
+        <value>username</value>
+    </string>
+    <string>
+        <key>txt_header_signin</key>
+        <value>Sign in</value>
+    </string>
+    <string>
+        <key>btn_signin</key>
+        <value>Sign in</value>
+    </string>
+</strings>

@@ -1,0 +1,13 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<list>
+    <lang>
+        <code>en</code>
+        <name>English</name>
+        <file>lang-pack-en.xml</file>
+    </lang>
+    <lang>
+        <code>de</code>
+        <code>German</code>
+        <file>lang-pack-de.xml</file>
+    </lang>
+</list>
