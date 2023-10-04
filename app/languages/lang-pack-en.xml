@@ -6,7 +6,7 @@
     </string>
     <string>
         <key>txt_signinserver</key>
-        <value>You are signing into: {$servername}</value>
+        <value>You are signing in to: {$servername}</value>
     </string>
     <string>
         <key>label_staysignedin</key>
