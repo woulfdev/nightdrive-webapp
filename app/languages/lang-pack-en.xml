@@ -9,6 +9,10 @@
         <value>You are signing in to {$servername}</value>
     </string>
     <string>
+        <key>txt_hint_signin_no_input</key>
+        <value>Please enter username and password!</value>
+    </string>
+    <string>
         <key>label_staysignedin</key>
         <value>stay signed in</value>
     </string>
