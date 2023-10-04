@@ -5,15 +5,19 @@
         <value>NightDrive</value>
     </string>
     <string>
-        <key>txt_label_staysignedin</key>
+        <key>txt_signinserver</key>
+        <value>You are signing into: {$servername}</value>
+    </string>
+    <string>
+        <key>label_staysignedin</key>
         <value>stay signed in</value>
     </string>
     <string>
-        <key>txt_placeholder_password</key>
+        <key>placeholder_password</key>
         <value>password</value>
     </string>
     <string>
-        <key>txt_paceholder_username</key>
+        <key>paceholder_username</key>
         <value>username</value>
     </string>
     <string>
