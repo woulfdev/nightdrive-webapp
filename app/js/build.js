@@ -2,8 +2,8 @@ class Build {
     // build the sign in page
     signin() {        
         this.loading()
-        document.title = 'NightDrive - Sign in'
-        location.href = location.href + '#/signin'
+        document.title = getLocalString('txt_app_name') + ' - ' + getLocalString('txt_header_signin')
+        // location.href = location.href + '#/signin'
 
         this.#clear()
 
@@ -17,19 +17,19 @@ class Build {
             class: 'centered box '
         }))
         $('#login-box').append(jQuery('<h2>', {
-            text: 'Sign in',
+            text: getLocalString('txt_header_signin'),
             class: 'text header centered'
         })).append(jQuery('<input>', {
             id: 'inp-username',
             type: 'text',
             name: 'username',
-            placeholder: 'username',
+            placeholder: getLocalString('placeholder_username'),
             class: 'input default text stacked center'
         })).append(jQuery('<input>', {
             id: 'inp-password',
             type: 'password',
             name: 'password',
-            placeholder: 'password',
+            placeholder: getLocalString('placeholder_password'),
             class: 'input default text stacked center'
         })).append(jQuery('<p>', {
             id: 'hint-inp-signin',
@@ -40,15 +40,15 @@ class Build {
             class: 'input default checkbox'
         })).append(jQuery('<label>', {
             for: 'inp-stay-signed-in',
-            text: 'stay signed in'
+            text: getLocalString('lable_staysignedin')
         })).append(jQuery('<input>', {
             id: 'btn-signin',
             type: 'button',
-            value: 'Sign in',
+            value: getLocalString('bnt_signin'),
             class: 'input default big button stacked center'
         })).append(jQuery('<p>', {
             id: 'hint-sign-in-server',
-            html: 'You are signing in to <b id="btn-change-server" title="Change" style="cursor:pointer">' + SERVER_ADDRESS + '</b>.',
+            html: getLocalString('txt_signinserver') + ' <b id="btn-change-server" title="Change" style="cursor:pointer">' + SERVER_ADDRESS + '</b>.',
             class: 'text centered'
         }))
     }

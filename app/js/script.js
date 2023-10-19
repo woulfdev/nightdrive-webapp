@@ -3,9 +3,13 @@ const builder = new Build()
 const userSession = new Session()
 
 const SERVER_ADDRESS = 'nightdrive.example.com'
+const UI_LANGUAGE = 'en'
 
 $().ready(function(){
     builder.loading()
+    // load language pack
+    loadLanguagePack()
+
     // check if a session already exists else show sign in
     if(checkForExistingSession()) {
         // check if said session is still valid else show sign in
@@ -34,17 +38,22 @@ $(document).on('click', '#btn-signin', function() {
         username = password = undefined
     }
     else {
-        $('#hint-inp-signin').text('Please enter Username and Password!').css('color', '#ff0000')
+        $('#hint-inp-signin').text(getLocalString('txt_hint_signinnoinput')).css('color', '#ff0000')
     }
 })
 
 // change server address on sign in screen
 $(document).on('click', '#btn-change-server', function() {
-    var input = prompt('Please enter the server address:')
+    var input = prompt(getLocalString('prompt_serverurl'))
     if(input !== null) {
         alert(input)
     }
 })
+
+// load language pack
+function loadLanguagePack() {
+
+}
 
 // check if valid session credentials are stored
 function checkForExistingSession() {

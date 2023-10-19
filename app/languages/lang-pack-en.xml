@@ -9,7 +9,7 @@
         <value>You are signing in to {$servername}</value>
     </string>
     <string>
-        <key>txt_hint_signin_no_input</key>
+        <key>txt_hint_signinnoinput</key>
         <value>Please enter username and password!</value>
     </string>
     <string>
@@ -31,5 +31,9 @@
     <string>
         <key>btn_signin</key>
         <value>Sign in</value>
+    </string>
+    <string>
+        <key>prompt_serverurl</key>
+        <value>Please enter the server address:</value>
     </string>
 </strings>
