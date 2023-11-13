@@ -47,6 +47,13 @@ $(document).on('click', '#btn-change-server', function() {
     var input = prompt(getLocalString('prompt_serverurl'))
     if(input !== null) {
         alert(input)
+        $.ajax({
+            type: 'GET',
+            url: input + 'api/v1/',
+            error: function() {
+                alert(getLocalString('prompt_urldidntvalidate'))
+            }
+        })
     }
 })
 

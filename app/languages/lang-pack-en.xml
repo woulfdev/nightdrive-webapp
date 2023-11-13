@@ -36,4 +36,8 @@
         <key>prompt_serverurl</key>
         <value>Please enter the server address:</value>
     </string>
+    <string>
+        <key>prompt_urldidntvalidate</key>
+        <value>Could't validate server URL.</value>
+    </string>
 </strings>
