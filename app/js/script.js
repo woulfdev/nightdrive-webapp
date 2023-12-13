@@ -3,7 +3,7 @@ const builder = new Build()
 const userSession = new Session()
 
 const SERVER_ADDRESS = 'nightdrive.example.com'
-const UI_LANGUAGE = 'en'
+const UI_LANGUAGE_DEFAULT = 'en'
 
 $().ready(function(){
     builder.loading()
