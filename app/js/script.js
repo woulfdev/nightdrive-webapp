@@ -1,5 +1,6 @@
+const local = new Localization('en')
 const storage = new BrowserStorage()
-const builder = new Build()
+const builder = new Build(local)
 const userSession = new Session()
 
 const SERVER_ADDRESS = 'nightdrive.example.com'
@@ -38,20 +39,19 @@ $(document).on('click', '#btn-signin', function() {
         username = password = undefined
     }
     else {
-        $('#hint-inp-signin').text(getLocalString('txt_hint_signinnoinput')).css('color', '#ff0000')
+        $('#hint-inp-signin').text(local.string('txt_hint_signinnoinput')).css('color', '#ff0000')
     }
 })
 
 // change server address on sign in screen
 $(document).on('click', '#btn-change-server', function() {
-    var input = prompt(getLocalString('prompt_serverurl'))
+    var input = prompt(local.string('prompt_serverurl'))
     if(input !== null) {
-        alert(input)
         $.ajax({
             type: 'GET',
             url: input + 'api/v1/',
             error: function() {
-                alert(getLocalString('prompt_urldidntvalidate'))
+                alert(local.string('prompt_urldidntvalidate'))
             }
         })
     }

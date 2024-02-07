@@ -1,0 +1,176 @@
+:root {
+    --color-primary: #222222;
+    --color-primary-highlight: #300070;
+    --color-primary-dark: #404040;
+    --color-secondary: #7225D5;
+    --color-highlight: #ff0000;
+    --color-text: #ffffff;
+}
+
+* {
+    outline: 1px solid #ffffff4f;
+}
+
+html {
+    height: 100%;
+    background-color: var(--color-primary);
+    font-size: 100%;
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+.border {
+    border-width: 2px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--color-secondary);
+}
+
+.border.smal {
+    border-width: 1px;
+}
+
+.shadow {
+    box-shadow: 0px 0px 10px 10px var(--color-primary-dark);
+}
+
+/* div centering */
+.centered.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered.box {
+    background-color: var(--color-primary);
+}
+
+/* input element styling */
+.input.default {
+    margin: 0.8vw;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: larger;
+}
+
+.input.default:disabled {
+    opacity: 0.6;
+}
+
+.input.default:disabled:hover {
+    background-color: inherit;
+}
+
+.input.default.stacked {
+    display: block;
+}
+
+.input.default.center {
+    margin: 0.8vw auto 0.8vw auto;
+    display: block;
+}
+
+.input.default:hover {
+    background-color: var(--color-primary-highlight);
+}
+
+.input.default:focus {
+    background-color: var(--color-primary-highlight);
+}
+
+.input.default.button {
+    cursor: pointer;
+}
+
+.input.big.button {
+    /* cursor: pointer; */
+    font-size: x-large;;
+}
+
+.text.centered {
+    text-align: center;
+}
+
+/* link styling */
+.link.default.external::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    background: url("../icons/external-link-ico.min.svg") no-repeat center center;
+    display: inline-block;
+}
+
+#login-box {
+    margin-top: -20vw;
+}
+
+/* loading animation */
+#loader-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem #7225D5bf);
+}
+.loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem var(--color-secondary);
+    animation-name: pulsIn;
+}
+.loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 var(--color-secondary);
+}
+
+@keyframes pulsIn {
+    0% {
+      box-shadow: inset 0 0 0 1rem var(--color-secondary);
+      opacity: 1;
+    }
+    50%, 100% {
+      box-shadow: inset 0 0 0 0 var(--color-secondary);
+      opacity: 0;
+    }
+}
+
+@keyframes pulsOut {
+    0%, 50% {
+      box-shadow: 0 0 0 0 var(--color-secondary);
+      opacity: 0;
+    }
+    100% {
+      box-shadow: 0 0 0 1rem var(--color-secondary);
+      opacity: 1;
+    }
+}   

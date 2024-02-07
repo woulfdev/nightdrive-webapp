@@ -1,8 +1,14 @@
 class Build {
+    #local
+
+    constructor(localizationInstance) {
+        this.#local = localizationInstance
+    }
+
     // build the sign in page
     signin() {        
         this.loading()
-        document.title = getLocalString('txt_app_name') + ' - ' + getLocalString('txt_header_signin')
+        document.title = this.#local.string('txt_app_name') + ' - ' + this.#local.string('txt_header_signin')
         // location.href = location.href + '#/signin'
 
         this.#clear()
@@ -17,19 +23,19 @@ class Build {
             class: 'centered box '
         }))
         $('#login-box').append(jQuery('<h2>', {
-            text: getLocalString('txt_header_signin'),
+            text: this.#local.string('txt_header_signin'),
             class: 'text header centered'
         })).append(jQuery('<input>', {
             id: 'inp-username',
             type: 'text',
             name: 'username',
-            placeholder: getLocalString('placeholder_username'),
+            placeholder: this.#local.string('placeholder_username'),
             class: 'input default text stacked center'
         })).append(jQuery('<input>', {
             id: 'inp-password',
             type: 'password',
             name: 'password',
-            placeholder: getLocalString('placeholder_password'),
+            placeholder: this.#local.string('placeholder_password'),
             class: 'input default text stacked center'
         })).append(jQuery('<p>', {
             id: 'hint-inp-signin',
@@ -40,15 +46,15 @@ class Build {
             class: 'input default checkbox'
         })).append(jQuery('<label>', {
             for: 'inp-stay-signed-in',
-            text: getLocalString('lable_staysignedin')
+            text: this.#local.string('lable_staysignedin')
         })).append(jQuery('<input>', {
             id: 'btn-signin',
             type: 'button',
-            value: getLocalString('bnt_signin'),
+            value: this.#local.string('btn_signin'),
             class: 'input default big button stacked center'
         })).append(jQuery('<p>', {
             id: 'hint-sign-in-server',
-            html: getLocalString('txt_signinserver') + ' <b id="btn-change-server" title="Change" style="cursor:pointer">' + SERVER_ADDRESS + '</b>.',
+            html: this.#local.string('txt_signinserver') + ' <b id="btn-change-server" title="Change" style="cursor:pointer">' + SERVER_ADDRESS + '</b>.',
             class: 'text centered'
         }))
     }
